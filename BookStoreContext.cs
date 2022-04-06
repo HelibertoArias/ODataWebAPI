@@ -15,6 +15,7 @@ namespace ODataWebAPI
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Owned Entity Types https://bit.ly/3DHC9h8
             modelBuilder.Entity<Book>().OwnsOne(c => c.Location);
         }
     }

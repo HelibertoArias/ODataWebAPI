@@ -5,7 +5,8 @@ namespace ODataWebAPI
 {
     public static class ODataExtension
     {
-        public   static IEdmModel GetEdmModel()
+        // EDM is short for Entity Data Model
+        public static IEdmModel GetEdmModel()
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Book>("Books");

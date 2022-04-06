@@ -7,13 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers()
-    .AddOData(setup => 
+    .AddOData(setup =>
         setup.AddRouteComponents(
-                "odata", 
+                "odata",
                 ODataExtension.GetEdmModel())
         .Filter()
         .Select()
         .Expand()
+        .OrderBy()
+
 
     );
 
@@ -42,7 +44,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
- 
+
 
 
 app.Run();
